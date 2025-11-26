@@ -1061,7 +1061,7 @@ img {
 .product-price {
   font-size: 17px;
   font-weight: 700;
-  color: #1b7e35; 
+  color: #1b277e; 
   transition: margin 0.3s ease;
 }
 
@@ -1080,9 +1080,9 @@ img {
   border-radius: 8px;
 
   /* ⭐ ESTILO DEL BOTÓN */
-  background: rgba(0,0,0,0.7); /* negro transparente */
-  color: #000; /* texto negro mientras no esté hover */
-  border: 2px solid transparent;
+  background: #7c5a36; /* negro transparente */
+  color: #ffffff; /* texto negro mientras no esté hover */
+  border: 2px solid white;
 
   font-weight: bold;
   transition: all 0.35s ease;
@@ -1095,9 +1095,9 @@ img {
 
 /* Hover del botón */
 .btn-comprar:hover {
-  background: #5be38a;        /* verde clarito */
-  color: white;               /* letra blanca */
-  border: 2px solid white;    /* borde blanco */
+  background: #ffffff;        /* verde clarito */
+  color: rgb(0, 0, 0);               /* letra blanca */
+  border: 2px solid rgb(62, 30, 19);    /* borde blanco */
 }
 
 /* Responsive */
@@ -1123,6 +1123,7 @@ img {
 .contacto-grid h3{
   color: rgb(255, 255, 255);
   -webkit-text-stroke: 1px rgb(255, 255, 255);
+  padding: 15px;
 }
 
 .titulo-contacto {
@@ -1147,13 +1148,15 @@ img {
   padding: 20px;
   border-radius: 14px;
   box-shadow: 0 4px 16px rgba(255, 255, 255, 0.85);
+  max-width: 100%; 
+  box-sizing: border-box;
 }
 
 /* FORMULARIO */
 .contacto-form form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 20px;
 }
 
 .contacto-form input,
@@ -1165,6 +1168,11 @@ img {
   font-size: 15px;
   outline: none;
 }
+.contacto-form textarea {
+    height: 200px;
+    resize: none;
+}
+
 .contacto-datos{
   align-items: center;
 }
@@ -1176,9 +1184,9 @@ img {
   margin: 10px 0;
 }
 
-.contact-item i {
+.contact-item i, p {
   font-size: 22px;
-  color: #000000;
+  color: #ffffff;
 }
 
 .contact-item span {
@@ -1247,11 +1255,12 @@ img {
 @media (max-width: 900px) {
   .contacto-grid {
     grid-template-columns: 1fr;
-  }
-
-  .contacto-mapa iframe {
-    height: 200px;
-  }
 }
-/* --- FIN ESTILOS DE LA SECCIÓN CONTACTO --- */
+}
 
+.container-frooter h1{
+  color: #ffffff;
+  align-items: center;
+  position:static;
+  font-size: 30px;
+}
