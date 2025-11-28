@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora 2.0</title>
+     <link rel="icon" type="image/png" href="https://i.pinimg.com/736x/1c/c9/b3/1cc9b31c02a00acc7fa62731e9e392a5.jpg" />
+     <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Display -->
+    <div class="display">
+        <input type="text" id="resultado" readonly>
+    </div>
+
+    <!-- Botones -->
+    <div class="botones">
+
+        <!-- Fila 1 -->
+        <button class="operador" onclick="clearAll()">C</button>
+        <button class="operador" onclick="deleteLast()">←</button>
+        <button class="operador" onclick="percent()">%</button>
+        <button class="operador" onclick="appendOperator('/')">/</button>
+
+        <!-- Fila 2 -->
+        <button class="numero" onclick="appendNumber('7')">7</button>
+        <button class="numero" onclick="appendNumber('8')">8</button>
+        <button class="numero" onclick="appendNumber('9')">9</button>
+        <button class="operador" onclick="appendOperator('*')">×</button>
+
+        <!-- Fila 3 -->
+        <button class="numero" onclick="appendNumber('4')">4</button>
+        <button class="numero" onclick="appendNumber('5')">5</button>
+        <button class="numero" onclick="appendNumber('6')">6</button>
+        <button class="operador" onclick="appendOperator('-')">-</button>
+
+        <!-- Fila 4 -->
+        <button class="numero" onclick="appendNumber('1')">1</button>
+        <button class="numero" onclick="appendNumber('2')">2</button>
+        <button class="numero" onclick="appendNumber('3')">3</button>
+        <button class="operador" onclick="appendOperator('+')">+</button>
+
+        <!-- Fila 5 -->
+        <button class="numero" onclick="appendNumber('0')">0</button>
+        <button class="numero" onclick="appendDecimal()">.</button>
+        <button class="operador igual" onclick="calculate()">=</button>
+
+    </div>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>

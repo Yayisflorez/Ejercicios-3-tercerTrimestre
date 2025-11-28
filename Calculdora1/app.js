@@ -1,7 +1,7 @@
 const display = document.getElementById("resultado");
 const botones = document.querySelectorAll("button");
 
-// Mostrar 0 al iniciar
+
 display.value = "0";
 
 // Función para agregar texto
