@@ -1,5 +1,7 @@
 let resultado = document.getElementById("resultado");
 
+resultado.value = "0";
+
 // --------------------- NÚMEROS ---------------------
 function appendNumber(num) {
     if (resultado.value === "0") {

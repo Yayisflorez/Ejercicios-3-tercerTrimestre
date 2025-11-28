@@ -1,10 +1,10 @@
 body {
-    background: linear-gradient(to right, #c58c67, #dca681);
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Arial;
+    background: url('https://i.pinimg.com/1200x/90/4d/7b/904d7bb31966fde6a36cc811b92fa451.jpg') no-repeat center center/cover;
 }
 
 .container {
@@ -22,7 +22,7 @@ body {
     background: #3b2019;
     border: none;
     border-radius: 20px;
-    font-size: 2.5rem;
+    font-size: 70px;
     color: white;
     text-align: right;
     padding: 15px;
