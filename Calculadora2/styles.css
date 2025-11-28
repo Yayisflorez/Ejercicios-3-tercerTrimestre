@@ -58,3 +58,6 @@ button:active {
     border-radius: 40px;
     width: 100%;
 }
+.limpiar, .porcentaje, .borrar{
+    background: #fa967d;
+}

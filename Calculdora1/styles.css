@@ -27,7 +27,7 @@ body{
 .display input{
     width: 96%;
     height: 100px;
-    font-size: 50px;
+    font-size: 65px;
     text-align: right;
     border: none;
     outline: none;
@@ -52,8 +52,8 @@ body{
 
 
 button{
-    padding: 45px;
-    font-size: 22px;
+    padding: 40px;
+    font-size: 30px;
     border: none;
     border-radius: 12px;
     cursor: pointer;

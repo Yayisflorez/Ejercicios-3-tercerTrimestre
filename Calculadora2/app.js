@@ -3,7 +3,7 @@ let resultado = document.getElementById("resultado");
 resultado.value = "0";
 
 // --------------------- NÚMEROS ---------------------
-function appendNumber(num) {
+function agregarNumero(num) {
     if (resultado.value === "0") {
         resultado.value = num;
     } else {
@@ -12,7 +12,7 @@ function appendNumber(num) {
 }
 
 // --------------------- PUNTO DECIMAL ---------------------
-function appendDecimal() {
+function puntoDecimal() {
     let valor = resultado.value;
     let ultimaParte = "";
 
@@ -26,7 +26,7 @@ function appendDecimal() {
 }
 
 // --------------------- OPERADORES ---------------------
-function appendOperator(op) {
+function agregarOperador(op) {
     if (resultado.value === "0") {
         alert("El formato usado no es válido!");
         return;
@@ -40,12 +40,13 @@ function appendOperator(op) {
 }
 
 // --------------------- LIMPIAR TODO ---------------------
-function clearAll() {
+function limpiar() {
     resultado.value = "0";
 }
 
 // --------------------- BORRAR UNO ---------------------
-function deleteLast() {
+function borrar
+() {
     if (resultado.value.length === 1) {
         resultado.value = "0";
     } else {
@@ -54,7 +55,7 @@ function deleteLast() {
 }
 
 // --------------------- PORCENTAJE ---------------------
-function percent() {
+function porcentaje() {
     try {
         resultado.value = (parseFloat(resultado.value) / 100).toString();
     } catch {
@@ -64,7 +65,7 @@ function percent() {
 }
 
 // --------------------- CALCULAR ---------------------
-function calculate() {
+function calcular() {
     try {
         let expr = resultado.value.replace(/×/g, "*");
 
