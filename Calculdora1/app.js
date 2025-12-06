@@ -79,7 +79,7 @@ function borrarDespues() {
   setTimeout(() => (display.value = "0"), 2000);
 }
 
-// Calcular raíz normal √x
+
 function calcularRaiz() {
   try {
     let numero = eval(display.value);
@@ -144,7 +144,6 @@ function raizN() {
     display.value = Number(resultado.toFixed(3));
     borrarDespues();
   } else {
-    // Agregar √
     display.value += "√";
   }
 }
@@ -205,11 +204,11 @@ function calcular() {
   }
 }
 
-// Manejar los clics
+
 function manejarClickBoton(event) {
   let valor = event.target.textContent;
 
-  // Convertir × a *
+
   if (valor === "×") {
     valor = "*";
   }
@@ -237,7 +236,7 @@ function manejarClickBoton(event) {
   }
 }
 
-// Asignar eventos a cada botón
+
 for (let i = 0; i < botones.length; i++) {
   botones[i].addEventListener("click", manejarClickBoton);
 }
