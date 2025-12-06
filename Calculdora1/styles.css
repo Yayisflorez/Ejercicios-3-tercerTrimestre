@@ -1,35 +1,47 @@
-/* Fondo general */
+/* Fondo y centrado total */
 body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+  min-height: 100vh;
   background: url("Souses/Fondo.jpeg") no-repeat center center/cover;
   font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
 }
 
 /* Contenedor de la calculadora */
 .container {
   background: rgba(20, 0, 40, 0.8);
-  padding: 20px;
+  padding:20px;  
   border-radius: 20px;
-  width: 550px;
-  height: 800px;
-  backdrop-filter: blur(10px);
 
+  width: 90%;
+  max-width: 350px;
+  height: 98%;
+  margin: auto;
+
+  backdrop-filter: blur(10px);
   box-shadow: 0 0 25px #5a00ff, inset 0 0 20px #21004f;
+
+  display: flex;
+  flex-direction: column;
+
+  transform: scale(1);          /* tamaño normal */
+  transition: transform 0.3s ease;
 }
 
 /* Pantalla */
 .display input {
   width: 96%;
-  height: 100px;
-  font-size: 65px;
+  height: 60px;
+  font-size: 38px;
   text-align: right;
   border: none;
   outline: none;
   padding: 10px;
   color: #fff;
+  margin-bottom: 20px;
 
   background: linear-gradient(180deg, #250050, #120026);
   border-radius: 12px;
@@ -39,45 +51,68 @@ body {
 
 /* Grid de botones */
 .botones {
-  margin-top: 20px;
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 15px;
+  gap: 14px; 
 }
 
 button {
-  padding: 35px;
-  font-size: 25px;
+  padding: 15px;
+  font-size: 20px;
   border: none;
   border-radius: 12px;
   cursor: pointer;
+  height: 50px;
+  width: 76px;
 
   color: white;
   background: rgba(70, 0, 120, 0.45);
 
   transition: 0.25s ease;
-
-  /* Glow detrás del botón (suave en estado normal) */
-  box-shadow: 0 0 8px #3a008e, 0 0 15px #2b0067 inset;
+  box-shadow: 0 0 8px #3a008e, inset 0 0 10px #2b0067;
 }
 
 button:hover {
   background: rgba(255, 255, 255, 0.9);
   color: rgb(221, 0, 255);
-
-  box-shadow: 0 0 25px rgb(221, 0, 255), 0 0 45px #ffffff;
+  box-shadow: 0 0 18px rgb(221, 0, 255), 0 0 35px #ffffff;
 }
 
 button:active {
   transform: scale(0.92);
   background: #b100ff;
   color: #ffffff;
-
-  /* Glow morado detrás real */
-  box-shadow: 0 0 30px #b100ff, 0 0 60px #a900ff, inset 0 0 20px #d500ff;
+  box-shadow: 0 0 25px #b100ff, 0 0 50px #a900ff, inset 0 0 15px #d500ff;
 }
-/* Botones operadores más brillantes */
+
 .operador {
   background: rgba(120, 0, 180, 0.6);
+}
+
+
+@media (min-width: 1601px) {
+  .container {
+    transform: scale(1.5);
+    transform-origin: top center;
+    margin-top: 50px;
+  }
+}
+
+@media (max-width: 900px) {
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;          
+    min-height: 100vh;
+    padding: 10px 0;        
+    overflow: visible;     
+  }
+
+  .container {
+    transform: scale(1.6);   
+    transform-origin: center;
+  }
 }
 
