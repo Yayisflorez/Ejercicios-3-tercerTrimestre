@@ -1,46 +1,57 @@
+/* Fondo y centrado */
 body {
     height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
     font-family: Arial;
-    background: url('https://i.pinimg.com/1200x/90/4d/7b/904d7bb31966fde6a36cc811b92fa451.jpg') no-repeat center center/cover;
+    background: url('https://i.pinimg.com/1200x/90/4d/7b/904d7bb31966fde6a36cc811b92fa451.jpg') 
+                no-repeat center center/cover;
 }
 
+/* Contenedor de calculadora (tamaño base) */
 .container {
     background: #4a2e24;
-    padding: 25px;
-    border-radius: 25px;
+    padding: 18px;
+    border-radius: 22px;
     box-shadow: 0 8px 20px rgba(0,0,0,0.4);
-    width: 400px;
-    height:  700px;
+    width: 300px;
+    height: 500px;
+
+    /* Para agrandarla sin romper nada */
+    transform-origin: center;
+
+    transform: scale(1);          /* tamaño normal */
+    transition: transform 0.3s ease;
 }
 
+/* Display compacto */
 .display input {
     width: 95%;
-    height: 80px;
+    height: 60px;
     background: #3b2019;
     border: none;
-    border-radius: 20px;
-    font-size: 70px;
+    border-radius: 15px;
+    font-size: 40px;
     color: white;
     text-align: right;
-    padding: 15px;
-    margin-bottom: 25px;
+    padding: 10px;
+    margin-bottom: 20px;
 }
 
+/* Grid de botones */
 .botones {
     display: grid;
-    grid-template-columns: repeat(4, 70px);
-    gap: 30px;
-    column-gap: 35px;
-    
+    grid-template-columns: repeat(4, 55px);
+    gap: 18px;
+    justify-content: center;
 }
 
+/* Botones */
 button {
-    height: 90px;
-    width: 90px;
-    font-size: 1.5rem;
+    height: 55px;
+    width: 55px;
+    font-size: 1.1rem;
     border: none;
     background: #e8a488;
     border-radius: 50%;
@@ -52,12 +63,33 @@ button:active {
     transform: scale(0.93);
 }
 
+/* Botón igual */
 .igual {
     background: #f2b36e;
-        grid-column: span 2;
-    border-radius: 40px;
+    grid-column: span 2;
+    border-radius: 25px;
     width: 100%;
 }
-.limpiar, .porcentaje, .borrar{
+
+.limpiar, .porcentaje, .borrar {
     background: #fa967d;
 }
+
+
+
+@media (max-width: 1501px) {
+    .container {
+        transform: scale(1.8);
+    }
+}
+
+@media (min-width: 500px) {
+    .container {
+        transform: scale(1.3);
+    }
+}
+
+
+
+
+
